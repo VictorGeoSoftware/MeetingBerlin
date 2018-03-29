@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">MeetingBerlin</string>
     <string name="network_error">Couldn`t show list of reviews</string>
+    <string name="show_all_reviews">Show all reviews</string>
+    <string name="add_review">Add review</string>
+    <string name="filter_reviews">Filter reviews</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="your_name">Your name</string>
+    <string name="your_country">Your country</string>
+    <string name="title">Title of your review</string>
+    <string name="message">Message</string>
+    <string name="give_us_a_mark">Give us a mark</string>
+    <string name="complete_fields">Please, complete mandatory fields</string>
 </resources>

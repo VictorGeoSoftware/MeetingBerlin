@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainLayout"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.victor.test.meetingberlin.ui.main.MainActivity"
-    android:padding="10dp">
+    tools:context="com.victor.test.meetingberlin.ui.main.MainActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@color/white"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Hello World!" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lstReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
+</LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/lstReviews"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"/>
-    </LinearLayout>
-
-
-</FrameLayout>

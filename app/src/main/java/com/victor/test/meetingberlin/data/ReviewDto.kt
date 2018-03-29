@@ -6,12 +6,12 @@ package com.victor.test.meetingberlin.data
  */
 
 /*
-    I ommit date_unformatted field due to optimize developing time.
+    I omit date_unformatted field due to optimize developing time.
  */
 data class ReviewDto(val review_id: Long,
                      val rating: String,
-                     val title: String,
-                     val message: String,
+                     val title: String?,
+                     val message: String?,
                      val author: String,
                      val foreignLanguage: Boolean,
                      val date: String,

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import com.victor.test.meetingberlin.R
 import com.victor.test.meetingberlin.data.ReviewDto
 import com.victor.test.meetingberlin.utils.inflate
+import com.victor.test.meetingberlin.utils.trace
 import kotlinx.android.synthetic.main.adapter_reviews.view.*
 
 /**
@@ -25,12 +26,22 @@ class ReviewsAdapter(private val reviewsList: ArrayList<ReviewDto>): RecyclerVie
 
     class ReviewViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(review:ReviewDto) = with(itemView) {
+
             txtAuthor.text = review.author
             txtDate.text = review.date
-            txtTitle.text = review.title
-            txtReviewerName.text = review.reviewerName
-            txtReviewerCountry.text = review.reviewerCountry
-            txtMessage.text = review.message
+
+            if (review.title != null && review.title.isNotEmpty()) {
+                txtTitle.text = review.title
+            } else {
+                txtTitle.visibility = View.GONE
+            }
+
+            if (review.message != null && review.message.trim().isNotEmpty()) {
+                txtMessage.text = review.message
+            } else {
+                layoutMessage.visibility = View.GONE
+            }
+
         }
     }
 }

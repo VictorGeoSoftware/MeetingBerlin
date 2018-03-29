@@ -11,6 +11,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="PrettySmallGrey" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/grey_text_dark</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
     <style name="SmallGrey" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/grey_text_dark</item>
         <item name="android:textSize">16sp</item>
@@ -26,15 +31,24 @@
         <item name="android:textSize">18sp</item>
     </style>
 
-    <!--<style name="TextMediumBlack" parent="@android:style/TextAppearance">-->
-    <style name="MediumBlack" parent="TextAppearance.AppCompat">
-        <!--<item name="android:textColor">@color/black_text</item>-->
-        <item name="android:textColor">@android:color/black</item>
+    <style name="MediumBlack" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black_text</item>
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BoldBlack" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="BigBlack" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/black_text</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="BigBlackBold" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textSize">22sp</item>
     </style>
 </resources>
