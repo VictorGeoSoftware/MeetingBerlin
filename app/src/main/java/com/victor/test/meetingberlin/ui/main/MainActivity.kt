@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.google.gson.Gson
 import com.victor.test.meetingberlin.R
 import com.victor.test.meetingberlin.data.ReviewDto
@@ -46,6 +49,17 @@ class MainActivity : AppCompatActivity(), ReviewsPresenter.ReviewsView {
         lstReviews.adapter = reviewsAdapter
 
 
+        edtFilter.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) { }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                reviewsAdapter.filter.filter(s.toString())
+            }
+        })
+
+
         reviewsPresenter.view = this
         reviewsPresenter.getReviewList(10)
     }
@@ -64,6 +78,12 @@ class MainActivity : AppCompatActivity(), ReviewsPresenter.ReviewsView {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.action_filter -> {
+                if (edtFilter.visibility == View.GONE) {
+                    edtFilter.visibility = View.VISIBLE
+                } else {
+                    edtFilter.setText("")
+                    edtFilter.visibility = View.GONE
+                }
 
             }
 

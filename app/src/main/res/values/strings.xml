@@ -8,6 +8,7 @@
     <string name="cancel">Cancel</string>
     <string name="your_name">Your name</string>
     <string name="your_country">Your country</string>
+    <string name="search_by_name">Search by name</string>
     <string name="title">Title of your review</string>
     <string name="message">Message</string>
     <string name="give_us_a_mark">Give us a mark</string>
