@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MeetingBerlin</string>
+    <string name="network_error">Couldn`t show list of reviews</string>
+</resources>
